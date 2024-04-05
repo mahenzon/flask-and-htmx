@@ -10,3 +10,12 @@ URLs:
 Этап 2:
 - Установка HTMX
 
+Этап 3:
+- Ping
+  - on click
+  - on shift + click
+- Hover
+- HTMX:
+  - `hx-swap="outerHTML"`
+  - `hx-trigger="mouseenter"`
+  - `hx-trigger="click[shiftKey]"`
