@@ -1,9 +1,9 @@
-<li>{{ product.name }} ${{ product.price }}
+<li class="product-item">{{ product.name }} ${{ product.price }}
   <button
     hx-delete="{{ url_for('products_app.delete', product_id=product.id) }}"
     hx-headers='{"X-CSRFToken": "{{ csrf_token() }}"}'
     hx-swap="outerHTML"
-    hx-target="closest li"
+    hx-target="closest .product-item"
     style="cursor: pointer;"
   >
     <img
