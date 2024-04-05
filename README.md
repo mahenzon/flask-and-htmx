@@ -22,3 +22,6 @@ URLs:
 
 Этап 4:
 - Clicker via HTMX
+
+Этап 5:
+- Embed clicker into index via HTMX
