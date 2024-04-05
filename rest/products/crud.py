@@ -37,6 +37,9 @@ class ProductsStorage:
     def name_exists(self, product_name: str) -> bool:
         return product_name in self.names
 
+    def delete(self, product_id: int) -> None:
+        self.products.pop(product_id, None)
+
 
 products_storage = ProductsStorage()
 
