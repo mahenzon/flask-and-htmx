@@ -65,3 +65,4 @@ URLs:
 Этап 13:
 - HTMX Push url - замена для истории браузера
 - `hx-target="body"`
+- `hx-confirm`
