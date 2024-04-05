@@ -11,10 +11,11 @@
     <button
       hx-post="{{ url_for('examples_app.ping') }}"
     >Send ping</button>
+    <button
+      hx-post="{{ url_for('examples_app.ping') }}"
+      hx-trigger="click[shiftKey]"
+    >Send ping (only with shift+click)</button>
   </div>
-  <hr>
-  <div>
-    <a href="{{ url_for('examples_app.index') }}"
-    >Back to examples</a>
-  </div>
+
+  {% include 'examples/components/footer.html' %}
 {% endblock %}
