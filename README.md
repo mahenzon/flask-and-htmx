@@ -39,17 +39,24 @@
 - https://www.svgbackgrounds.com/elements/animated-svg-preloaders/
 
 
-Этап 1:
+## Главы (видео)
+
+Ссылка на видео: 
+
+### Этап 1:
+[Ветка `checkpoint-01-init-app`](/mahenzon/flask-and-htmx/tree/checkpoint-01-init-app)
 - Инициализация Flask приложения
 - https://flask.palletsprojects.com/en/3.0.x/
 - https://jinja.palletsprojects.com/en/3.1.x/templates/
 
-Этап 2:
+### Этап 2:
+[Ветка `checkpoint-02-install-htmx`](/mahenzon/flask-and-htmx/tree/checkpoint-02-install-htmx)
 - Установка HTMX
 - https://htmx.org/
 - https://htmx.org/docs/
 
-Этап 3:
+### Этап 3:
+[Ветка `checkpoint-03-first-examples`](/mahenzon/flask-and-htmx/tree/checkpoint-03-first-examples)
 - Ping
   - on click
   - on shift + click
@@ -60,23 +67,28 @@
   - `hx-trigger="click[shiftKey]"`
 - https://htmx.org/attributes/hx-trigger/
 
-Этап 4:
+### Этап 4:
+[Ветка `checkpoint-04-clicker`](/mahenzon/flask-and-htmx/tree/checkpoint-04-clicker)
 - Clicker via HTMX
 - https://htmx.org/attributes/hx-post/
 - https://htmx.org/attributes/hx-swap/
 
-Этап 5:
+### Этап 5:
+[Ветка `checkpoint-05-embed-parts`](/mahenzon/flask-and-htmx/tree/checkpoint-05-embed-parts)
 - Embed clicker into index via HTMX
 
-Этап 6:
+### Этап 6:
+[Ветка `checkpoint-06-htmx-boosts`](/mahenzon/flask-and-htmx/tree/checkpoint-06-htmx-boosts)
 - Handle HTMX boosts
 - https://htmx.org/attributes/hx-boost/
 
-Этап 7:
+### Этап 7:
+[Ветка `checkpoint-07-products-list`](/mahenzon/flask-and-htmx/tree/checkpoint-07-products-list)
 - Список товаров
 - Создание через форму
 
-Этап 8:
+### Этап 8:
+[Ветка `checkpoint-08-products-create-item`](/mahenzon/flask-and-htmx/tree/checkpoint-08-products-create-item)
 - Создание через HTMX форму + подгрузка списка
 - Добавление через `hx-swap="beforeend"`
 - Обработка out of band элементов
@@ -85,18 +97,21 @@
 - https://htmx.org/attributes/hx-swap-oob/
 - https://htmx.org/attributes/hx-swap/
 
-Этап 9:
+### Этап 9:
+[Ветка `checkpoint-09-products-form-wtf`](/mahenzon/flask-and-htmx/tree/checkpoint-09-products-form-wtf)
 - Добавление CSRF (из Flask-WTF) защиты
 - Обработка формы Flask-WTF для добавления товара
 - https://flask-wtf.readthedocs.io/en/1.2.x/csrf/
 
-Этап 10:
+### Этап 10:
+[Ветка `checkpoint-10-csrf-token-headers`](/mahenzon/flask-and-htmx/tree/checkpoint-10-csrf-token-headers)
 - Добавление заголовков `hx-headers`
 - CSRF exempt
 - https://flask-wtf.readthedocs.io/en/1.2.x/csrf/#exclude-views-from-protection
 - https://htmx.org/attributes/hx-headers/
 
-Этап 11:
+### Этап 11:
+[Ветка `checkpoint-11-product-delete-animation`](/mahenzon/flask-and-htmx/tree/checkpoint-11-product-delete-animation)
 - Удаление товара
 - Выбор цели:
   - по ближайшему тегу: `hx-target="closest li"`
@@ -110,21 +125,25 @@
 - https://htmx.org/examples/animations/
 
 
-Этап 12:
+### Этап 12:
+[Ветка `checkpoint-12-product-update`](/mahenzon/flask-and-htmx/tree/checkpoint-12-product-update)
 - Обновление товара:
   - PUT запрос
   - обработка ошибок (форма)
 
-Этап 13:
+### Этап 13:
+[Ветка `checkpoint-13-product-details-delete`](/mahenzon/flask-and-htmx/tree/checkpoint-13-product-details-delete)
 - HTMX Push url - замена для истории браузера
 - `hx-target="body"`
 - `hx-confirm`
 - https://htmx.org/attributes/hx-push-url/
 - https://htmx.org/attributes/hx-confirm/
 
-Этап 14:
+### Этап 14:
+[Ветка `checkpoint-14-products-pagination-reveal`](/mahenzon/flask-and-htmx/tree/checkpoint-14-products-pagination-reveal)
 - Автоматическая подгрузка в бесконечный список (с анимацией)
 - `hx-trigger="revealed"`
 
-Этап 15:
+### Этап 15:
+[Ветка `checkpoint-15-products-pagination-buttons`](/mahenzon/flask-and-htmx/tree/checkpoint-15-products-pagination-buttons)
 - Пагинация кнопками
