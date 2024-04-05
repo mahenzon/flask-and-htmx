@@ -2,7 +2,6 @@
   id="create-product"
   hx-post="{{ url_for('products_app.create') }}"
   hx-swap="outerHTML"
-  hx-on::after-request="if (event.detail.successful) this.reset()"
 >
   <div>
     <label for="product-name">Product name</label>
