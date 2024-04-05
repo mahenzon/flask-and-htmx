@@ -4,6 +4,9 @@ from flask import (
     request,
 )
 
+from csrf_protection import csrf
+
+
 examples_app = Blueprint(
     "examples_app",
     __name__,
@@ -33,6 +36,7 @@ def handle_ping():
     methods=["GET", "POST"],
     endpoint="hover",
 )
+@csrf.exempt
 def handle_hover():
     if request.method == "POST":
         return "I see you! (only once)"
