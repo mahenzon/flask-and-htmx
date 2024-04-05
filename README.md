@@ -25,3 +25,6 @@ URLs:
 
 Этап 5:
 - Embed clicker into index via HTMX
+
+Этап 6:
+- Handle HTMX boosts
