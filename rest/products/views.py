@@ -9,7 +9,7 @@ from flask import (
 from werkzeug.exceptions import HTTPException
 
 from .crud import products_storage
-
+from .forms import ProductForm
 
 products_app = Blueprint(
     "products_app",
@@ -21,34 +21,34 @@ app = products_app
 
 @app.get("/", endpoint="list")
 def get_products_list():
+    form = ProductForm()
     products = products_storage.get_list()
     return render_template(
         "products/list.html",
         products=products,
+        form=form,
     )
 
 
 @app.post("/", endpoint="create")
 def create_product():
-    product_name = request.form.get("product-name", "").strip()
-    product_price = request.form.get("product-price", "").strip()
-    if not product_price.isdigit():
-        # raise BadRequest("product price should be integer")
+    form = ProductForm()
+    if not form.validate_on_submit():
         response = Response(
             render_template(
                 "products/components/form.html",
-                product_name=product_name,
-                error="product price should be integer",
+                form=form,
             ),
             status=HTTPStatus.UNPROCESSABLE_ENTITY,
         )
         raise HTTPException(response=response)
 
     product = products_storage.add(
-        product_name=product_name,
-        product_price=int(product_price),
+        product_name=form.name.data,
+        product_price=form.price.data,
     )
     return render_template(
         "products/components/form-and-item-oob.html",
         product=product,
+        form=ProductForm(formdata=None),
     )
