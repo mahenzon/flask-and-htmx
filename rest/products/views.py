@@ -6,6 +6,8 @@ from flask import (
     request,
     render_template,
     Response,
+    url_for,
+    redirect,
 )
 from werkzeug.exceptions import HTTPException, NotFound
 
@@ -105,4 +107,7 @@ def delete_product(product_id: int):
     for i in range(4_000):
         d[i] = i**i
     products_storage.delete(product_id)
-    return Response(status=HTTPStatus.NO_CONTENT)
+    if not request.args.get("redirect"):
+        return Response(status=HTTPStatus.NO_CONTENT)
+    url = url_for("products_app.list")
+    return redirect(url, code=HTTPStatus.SEE_OTHER)
