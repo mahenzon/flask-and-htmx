@@ -33,9 +33,7 @@ def create_product():
         product_name=product_name,
         product_price=int(product_price),
     )
-
-    products = products_storage.get_list()
     return render_template(
-        "products/components/items-list.html",
-        products=products,
+        "products/components/item.html",
+        product=product,
     )
