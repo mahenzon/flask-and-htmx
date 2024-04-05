@@ -24,7 +24,7 @@
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", (event) => {
     document.body.addEventListener('htmx:beforeSwap', function (evt) {
-      if (evt.detail.xhr.status === 422) {
+      if ([204, 422].indexOf(evt.detail.xhr.status) >= 0) {
         // allow 422 responses to swap
         // as we are using this as a signal
         // that a form was submitted with bad data
