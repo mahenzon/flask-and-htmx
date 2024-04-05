@@ -5,6 +5,7 @@
   </div>
   <button
     hx-post="{{ url_for('clicker_app.do-click') }}"
+    hx-headers='{"X-CSRFToken": "{{ csrf_token() }}"}'
     hx-target="#clicked-times"
   >Click!
   </button>
