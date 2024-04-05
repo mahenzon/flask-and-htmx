@@ -1,3 +1,4 @@
+from flask import request
 from flask_wtf import FlaskForm
 from wtforms import (
     StringField,
@@ -15,9 +16,10 @@ from .crud import products_storage
 
 def validate_product_name(form, field):
     product_name = field.data
-    if products_storage.name_exists(product_name):
+    # TODO: update: check same id
+    if request.method == "POST" and products_storage.name_exists(product_name):
         raise ValidationError(
-            f"Product with {product_name!r} already exists!",
+            f"Product with name {product_name!r} already exists!",
         )
 
 
@@ -37,3 +39,4 @@ class ProductForm(FlaskForm):
         ],
     )
     submit = SubmitField(label="Add product")
+    update_submit = SubmitField(label="Update product")
