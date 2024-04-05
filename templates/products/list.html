@@ -9,8 +9,7 @@
   <div>
     <form
       hx-post="{{ url_for('products_app.create') }}"
-      hx-target="#products-list"
-      hx-swap="beforeend"
+      hx-swap="none"
       hx-on::after-request="if (event.detail.successful) this.reset()"
     >
       <div>
