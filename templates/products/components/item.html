@@ -1,16 +1,6 @@
-<li class="product-item">{{ product.name }} ${{ product.price }}
-  <button
-    hx-delete="{{ url_for('products_app.delete', product_id=product.id) }}"
-    hx-headers='{"X-CSRFToken": "{{ csrf_token() }}"}'
-    hx-swap="outerHTML"
-    hx-target="closest .product-item"
-    style="cursor: pointer;"
-  >
-    <img
-      src="{{ url_for('static', filename="img/trash.svg") }}"
-      alt="delete"
-      width="10rem"
-      height="10rem"
-    >
-  </button>
+<li
+  id="product-{{ product.id }}"
+  class="product-item fade-me-out"
+>{{ product.name }} ${{ product.price }}
+  {% include 'products/components/delete-button.html' %}
 </li>

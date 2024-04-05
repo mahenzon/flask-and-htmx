@@ -56,5 +56,8 @@ def create_product():
 
 @app.delete("/<int:product_id>/", endpoint="delete")
 def delete_product(product_id: int):
+    d = {}
+    for i in range(4_000):
+        d[i] = i**i
     products_storage.delete(product_id)
     return Response(status=HTTPStatus.NO_CONTENT)
